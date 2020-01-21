@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:opacity="opaque">
+
+    <!-- The background colour -->
+    <item android:drawable="@android:color/white"/>
+
+    <!-- Splash screen logo -->
+    <item>
+        <bitmap android:src="@drawable/sp1"
+            android:gravity="center" />
+    </item>
+
+</layer-list>
