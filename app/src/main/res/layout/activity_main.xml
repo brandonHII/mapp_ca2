@@ -20,11 +20,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:layout_marginLeft="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="5dp"
         android:fontFamily="sans-serif-black"
         android:layout_below="@id/intro"
         android:id="@+id/textIntro"
         android:text="@string/textIntro"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textIntro"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/sp1" />
 
     <Button
         android:layout_width="wrap_content"
@@ -36,10 +46,10 @@
         android:layout_marginTop="21dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_below="@+id/textIntro"
+        android:layout_below="@+id/logo"
         android:id="@+id/eventBtn"
         android:text="@string/eventBtn"/>
-
+x
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
