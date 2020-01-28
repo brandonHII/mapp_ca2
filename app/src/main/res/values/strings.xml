@@ -4,4 +4,6 @@
     <string name="textIntro">Hello! Welcome to the app, this is how you keep in touch with school\'s event!</string>
     <string name="eventBtn">Events</string>
     <string name="socialBtn">Social Media</string>
+    <string name="aboutInfo">About Us</string>
+    <string name="socialMedia">The links should be here</string>
 </resources>

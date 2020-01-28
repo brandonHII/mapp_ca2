@@ -62,6 +62,7 @@
         android:layout_marginRight="8dp"
         android:layout_below="@+id/eventBtn"
         android:id="@+id/socialBtn"
-        android:text="@string/socialBtn"/>
+        android:text="@string/socialBtn"
+        android:onClick="launchSocialMedia"/>
 
 </RelativeLayout>
