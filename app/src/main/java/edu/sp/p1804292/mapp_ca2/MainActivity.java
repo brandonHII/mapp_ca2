@@ -29,6 +29,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public	void launchEvents(View view)	{
+        Intent intent	=	new	Intent(this,	Events.class);
+        startActivity(intent);
+    }
+
     //Menu button
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
