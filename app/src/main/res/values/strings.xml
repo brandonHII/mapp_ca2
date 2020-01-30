@@ -6,4 +6,7 @@
     <string name="socialBtn">Social Media</string>
     <string name="aboutInfo">About Us</string>
     <string name="socialMedia">The links should be here</string>
+    <string name="campBtn">Camps</string>
+    <string name="agmBtn">AGM</string>
+    <string name="talkBtn">Talks</string>
 </resources>
