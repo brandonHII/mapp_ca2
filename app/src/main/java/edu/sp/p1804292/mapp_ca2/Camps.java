@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -44,6 +45,10 @@ public class Camps extends AppCompatActivity {
         mAdapter = new CampListAdapter(this, items);
         recyclerView.setAdapter(mAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        //ImageView img = (ImageView)findViewById(R.id.imgplay);
+        // need to use mAdapter
+        //img.setImageResource(R.drawable.sp1);
     }
 
     void connectToInternet(){
