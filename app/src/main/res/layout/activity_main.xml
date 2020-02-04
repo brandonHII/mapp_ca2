@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="?attr/bgColor">
 
     <TextView
         android:layout_width="wrap_content"
@@ -14,7 +15,8 @@
         android:fontFamily="sans-serif-black"
         android:textSize="18dp"
         android:id="@+id/intro"
-        android:text="@string/intro" />
+        android:text="@string/intro"
+        android:textColor="?attr/textColor"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,7 +27,8 @@
         android:fontFamily="sans-serif-black"
         android:layout_below="@id/intro"
         android:id="@+id/textIntro"
-        android:text="@string/textIntro"/>
+        android:text="@string/textIntro"
+        android:textColor="?attr/textColor"/>
 
     <ImageView
         android:id="@+id/logo"
@@ -49,7 +52,9 @@
         android:onClick="launchEvents"
         android:layout_below="@+id/logo"
         android:id="@+id/eventBtn"
-        android:text="@string/eventBtn"/>
+        android:text="@string/eventBtn"
+        android:textColor="?attr/textColor"
+        android:background="?attr/buttonColor"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -61,10 +66,11 @@
         android:layout_marginTop="21dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:onClick="launchSocialMedia"
         android:layout_below="@+id/eventBtn"
         android:id="@+id/socialBtn"
         android:text="@string/socialBtn"
-        />
+        android:onClick="launchSocialMedia"
+        android:textColor="?attr/textColor"
+        android:background="?attr/buttonColor"/>
 
 </RelativeLayout>

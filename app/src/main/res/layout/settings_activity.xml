@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/bgColor">
+
+    <FrameLayout
+        android:id="@+id/settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <Switch
+            android:id="@+id/DM_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Switch>
+    </FrameLayout>
+
+    <TextView   
+        android:id="@+id/darktext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/darkMode"
+        android:layout_alignStart="@id/settings"
+        android:textSize="20dp"
+        android:padding="20dp"
+        android:textColor="?attr/textColor">
+
+    </TextView>
+
+
+</RelativeLayout>
