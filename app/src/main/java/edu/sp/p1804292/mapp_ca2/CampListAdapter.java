@@ -1,7 +1,11 @@
 package edu.sp.p1804292.mapp_ca2;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,12 +67,20 @@ public class CampListAdapter extends RecyclerView.Adapter<CampListAdapter.CampVi
             JSONObject obj = items.getJSONObject(names.getString(position));
             // display the name in textview
 
+            //Uri uri = Uri.parse(obj.getString("link"));
+            //Intent signUp = new Intent(Intent.ACTION_VIEW, uri);
+
             holder.tv.setText(obj.getString("name")
                     + "\n" + obj.getString("desc")
                     + "\n\nDate: " + obj.getString("date")
                     + "\nRegistration Date: " + obj.getString("regDate")
                     + "\nPrice: " + obj.getString("price")
-                    + "\nPayment Location: " + obj.getString("location"));
+                    + "\nPayment Location: " + obj.getString("location")
+                    + "\nSign up here: " + obj.getString("link"));
+
+            //holder.tv.setText(obj.getString("link").set);
+            //ctx.startActivity(signUp);
+
 
             //get number of item
             int num = getItemCount();
@@ -79,7 +91,6 @@ public class CampListAdapter extends RecyclerView.Adapter<CampListAdapter.CampVi
                     String p = "c" + (1+i);
                     //get the id of drawable
                     int pic = ctx.getResources().getIdentifier(p, "drawable", ctx.getPackageName());
-                    Log.d("resource", "return value is: " + pic);
                     holder.img.setImageResource(pic);
                 }
             }
