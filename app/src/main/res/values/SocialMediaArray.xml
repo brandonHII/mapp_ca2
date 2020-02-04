@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="school_Name">
+        <item>Singapore Polytechnic</item>
+        <item>School of Business</item>
+        <item>School of Computing</item>
+        <item>School of Media Arts and Design</item>
+        <item>Singapore Polytechnic Student Union</item>
+    </string-array>
+
+    <string-array name="SM_Links">
+        <item>https://www.instagram.com/singaporepoly/?hl=en</item>
+        <item>https://www.instagram.com/spbizsch/</item>
+        <item>https://www.instagram.com/sp.soc/?hl=en</item>
+        <item>https://www.instagram.com/sp_mad/</item>
+        <item>https://www.instagram.com/spstudentsunion/</item>
+
+    </string-array>
+
+
+
+</resources>
