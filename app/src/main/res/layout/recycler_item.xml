@@ -12,6 +12,8 @@
         android:textSize="15dp"
         android:layout_marginTop="20dp"
         android:autoLink="web"
+        android:textColor="?attr/textColor"
+
     />
 
     <ImageView

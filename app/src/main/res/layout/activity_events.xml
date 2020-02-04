@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Events">
+    tools:context=".Events"
+    android:background="?attr/bgColor">
 
     <Button
         android:layout_width="match_parent"
@@ -18,7 +19,9 @@
         android:layout_marginRight="8dp"
         android:onClick="launchCamp_Events"
         android:id="@+id/campBtn"
-        android:text="@string/campBtn"/>
+        android:text="@string/campBtn"
+        android:textColor="?attr/textColor"
+        android:background="?attr/buttonColor"/>
 
     <Button
         android:layout_width="match_parent"
@@ -33,7 +36,9 @@
         android:onClick="launchAGM_Events"
         android:layout_below="@id/campBtn"
         android:id="@+id/agmBtn"
-        android:text="@string/agmBtn" />
+        android:text="@string/agmBtn"
+        android:textColor="?attr/textColor"
+        android:background="?attr/buttonColor"/>
 
     <Button
         android:layout_width="match_parent"
@@ -48,6 +53,8 @@
         android:onClick="launchTalks_Events"
         android:layout_below="@id/agmBtn"
         android:id="@+id/talkBtn"
-        android:text="@string/talkBtn" />
+        android:text="@string/talkBtn"
+        android:textColor="?attr/textColor"
+        android:background="?attr/buttonColor"/>
 
 </RelativeLayout>

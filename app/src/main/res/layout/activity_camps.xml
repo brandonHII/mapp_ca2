@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Camps">
+    tools:context=".Camps"
+    android:background="?attr/bgColor">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
