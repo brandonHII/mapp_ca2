@@ -28,4 +28,11 @@
     <string name="campBtn">Camps</string>
     <string name="agmBtn">AGMs</string>
     <string name="talkBtn">Talks</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!-- Map name -->
+    <string name="normal_map">Normal</string>
+    <string name="hybrid_map">Hybrid</string>
+    <string name="satellite_map">Satellite</string>
+    <string name="terrain_map">Terrain</string>
 </resources>

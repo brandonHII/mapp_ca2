@@ -48,8 +48,18 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    //Button For Events
     public	void launchEvents(View view)	{
         Intent intent	=	new	Intent(this,	Events.class);
+        startActivity(intent);
+    }
+
+    //Button For Location Testing
+    public void launchMap(View view){
+        Intent intent	=	new	Intent(this,	MapsActivity.class);
+        intent.putExtra("Long",1.311424);
+        intent.putExtra("Lati",103.775977);
+        intent.putExtra("Location", " Lecture Theatre 12A");
         startActivity(intent);
     }
 
