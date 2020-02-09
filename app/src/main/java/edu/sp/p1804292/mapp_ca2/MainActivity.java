@@ -2,15 +2,19 @@ package edu.sp.p1804292.mapp_ca2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Switch;
+import com.android.volley.RequestQueue;
+
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
     private final String DM_KEY = "darkMode";
 
     private boolean mDM;
+
+    final String TAG = "CAMPS";
+    RecyclerView recyclerView;
+    CampListAdapter mAdapter;
+    ArrayList<CampItem> tex;
+
+    public static RequestQueue queue;
 
 
     @Override
@@ -85,4 +96,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }

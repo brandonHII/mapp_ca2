@@ -1,52 +1,35 @@
 package edu.sp.p1804292.mapp_ca2;
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
-import android.text.method.LinkMovementMethod;
-import android.text.util.Linkify;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class CampListAdapter extends RecyclerView.Adapter<CampListAdapter.CampViewHolder>{
 
-    private JSONObject items;
-    LayoutInflater inflater;
-    private JSONArray names;
-    Context ctx;
 
-    public CampListAdapter(Context ctx, JSONObject obj){
-        //store a reference to the loaded JSONArray from internet
-        //items = obj
-        setItems(obj);
+    LayoutInflater inflater;
+    Context ctx;
+    ArrayList<CampItem> obj;
+
+    public CampListAdapter(Context ctx, ArrayList<CampItem> obj){
+
 
         //get inflater for later use
-        inflater = LayoutInflater.from(ctx);
 
-        this.ctx = ctx;
+        inflater=LayoutInflater.from(ctx);
+        this.obj = obj;
+        this.ctx=ctx;
     }
 
-    public JSONObject getItems(){
-
-        return items;
-    }
-
-    public void setItems(JSONObject items){
-        this.items = items;
-        // store the key names for easy use later to lessen processing the load
-        names = items.names();
-    }
 
     @NonNull
     @Override
@@ -59,51 +42,49 @@ public class CampListAdapter extends RecyclerView.Adapter<CampListAdapter.CampVi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CampListAdapter.CampViewHolder holder, int position){
+    public void onBindViewHolder(@NonNull CampListAdapter.CampViewHolder holder, int position) {
         // retrieve data from array
 
+
         try {
-            // get the json object at this row position
-            JSONObject obj = items.getJSONObject(names.getString(position));
-            // display the name in textview
 
-            //Uri uri = Uri.parse(obj.getString("link"));
-            //Intent signUp = new Intent(Intent.ACTION_VIEW, uri);
+            CampItem test = obj.get(position);
 
-            holder.tv.setText(obj.getString("name")
-                    + "\n" + obj.getString("desc")
-                    + "\n\nDate: " + obj.getString("date")
-                    + "\nRegistration Date: " + obj.getString("regDate")
-                    + "\nPrice: " + obj.getString("price")
-                    + "\nPayment Location: " + obj.getString("location")
-                    + "\nSign up here: " + obj.getString("link"));
 
-            //holder.tv.setText(obj.getString("link").set);
-            //ctx.startActivity(signUp);
+            holder.tv.setText(
+                    test.getCname()
+                            + "\n" + test.getCdesc()
+                            + "\n\nDate: " + test.getCdate()
+                            + "\nSign up here: " + test.getCregDate()
+                            + "\nPrice: " + test.getCprice()
+                            + "\nPayment Location: " + test.getCloc()
+                            + "\nSign up here: " + test.getClink());
 
 
             //get number of item
             int num = getItemCount();
 
-            for(int i = 0; i < num; i++){
-                if (position == i){
+            for (int i = 0; i < num; i++) {
+                if (position == i) {
                     // name of drawable
-                    String p = "c" + (1+i);
+                    String p = "c" + (1 + i);
                     //get the id of drawable
                     int pic = ctx.getResources().getIdentifier(p, "drawable", ctx.getPackageName());
                     holder.img.setImageResource(pic);
                 }
             }
+        } catch (Exception e) {
 
-        }catch(Exception e){
-            Log.e("CampListAdapter ", e.getMessage());
         }
+
+
     }
+
 
     @Override
     public int getItemCount(){
 
-        return items.length();
+        return obj.size();
     }
 
     class CampViewHolder extends RecyclerView.ViewHolder {
@@ -123,20 +104,7 @@ public class CampListAdapter extends RecyclerView.Adapter<CampListAdapter.CampVi
         }
 
 
-        /* @Override
-        public void onClick(View view){
-            try{
-                // get the json object at the clicked position
-                JSONObject obj = items.getJSONObject(names.getString(this.getAdapterPosition()));
-                // print details from json object in Logcat
-                Log.d("CampViewHolder ", "Clicked: " +
-                        this.getAdapterPosition() + " - " +
-                        obj.getString("name"));
 
-            }catch (Exception e){
-                Log.e("CampViewHolder", e.getMessage());
-            }
-        } */
 
     }
 }

@@ -7,9 +7,9 @@ import android.util.Log;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
-import androidx.appcompat.app.ActionBar;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.preference.PreferenceFragmentCompat;
+
 
 public class SettingsActivity extends AppCompatActivity {
 

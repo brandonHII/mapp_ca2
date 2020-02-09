@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SP</string>
+    <string name="app_name">SParticipant</string>
     <string name="intro">Introduction</string>
     <string name="textIntro">Hello! Welcome to the app, this is how you keep in touch with school\'s event!</string>
     <string name="eventBtn">Events</string>
